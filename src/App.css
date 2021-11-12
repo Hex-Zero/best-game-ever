@@ -1,1 +1,27 @@
+.bge-grid-cell {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  font-size: 14px;
+  height: 100%;
+  line-height: 1.42857;
+  margin: 0;
+  padding: 8px;
+  vertical-align: top;
+}
 
+.bge-board-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  width: 460px;
+  height: 400px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
