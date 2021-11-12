@@ -1,25 +1,21 @@
-import * as React from 'react';
+import * as React from "react";
 
-export interface IGameBoardProps {
-}
+interface IGameRoomProps {}
 
+const GameRoom: React.FunctionComponent<IGameRoomProps> = (props) => {
+  return (
+    <div className="bge-board-container">
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+      <div className="bge-grid-cell"></div>
+    </div>
+  );
+};
 
-
-export default class GameBoard extends React.PureComponent<IGameBoardProps> {
-  public render() {
-    return (
-    
-      <div className="bge-board-container">
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-        <div className="bge-grid-cell"></div>
-      </div>
-    );
-  }
-}
+export default GameRoom;

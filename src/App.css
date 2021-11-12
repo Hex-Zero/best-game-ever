@@ -12,6 +12,14 @@
   vertical-align: top;
 }
 
+.bge-grid-cell:hover {
+  background-color: #e6f5ff;
+}
+
+.bge-grid-cell:active {
+  background-color: #d9e9ff;
+}
+
 .bge-board-container {
   margin-top: 1rem;
   display: grid;
