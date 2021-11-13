@@ -1,5 +1,8 @@
 import * as React from "react";
 import * as _ from "lodash";
+import { v4 as uuidv4 } from "uuid";
+import xSign from "../Assets/x-sign.svg";
+import oSign from "../Assets/o-sign.svg";
 
 interface IGameRoomProps {}
 
@@ -25,7 +28,6 @@ const GameRoom: React.FunctionComponent<IGameRoomProps> = (props) => {
   });
 
   const handleClick = (gridIndex: number) => {
-    console.log(boardState);
     const squares = boardState.squares;
     squares[gridIndex].value = boardState.playerTurn ? 1 : 2;
     squares[gridIndex].isEnabled = false;
@@ -35,14 +37,21 @@ const GameRoom: React.FunctionComponent<IGameRoomProps> = (props) => {
     });
   };
 
+  console.log(require("../Assets/x-sign.svg"));
+
   return (
     <div className="bge-board-container">
       {boardState.squares.map((square, index) => (
         <div
+          key={uuidv4()}
           onClick={square.isEnabled ? () => handleClick(index) : () => {}}
-          className="bge-grid-cell"
+          className="bge-grid-cell bge-x-simbol"
         >
-          {square.value ? square.value : null}
+          {square.value === 1 ? (
+            <img src={xSign} alt="x-sign" />
+          ) : square.value === 2 ? (
+            <img src={oSign} alt="o-sign" />
+          ) : null}
         </div>
       ))}
     </div>
