@@ -4,7 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import xSign from "../Assets/x-sign.svg";
 import oSign from "../Assets/o-sign.svg";
 
-interface IGameRoomProps {}
+interface IGameRoomProps {
+  gameId: string;
+}
 
 interface ISquareState {
   value: number;
