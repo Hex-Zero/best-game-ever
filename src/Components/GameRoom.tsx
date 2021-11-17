@@ -5,7 +5,7 @@ import xSign from "../Assets/x-sign.svg";
 import oSign from "../Assets/o-sign.svg";
 
 interface IGameRoomProps {
-  gameId: string;
+  
 }
 
 interface ISquareState {
